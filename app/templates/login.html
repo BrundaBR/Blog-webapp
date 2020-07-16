@@ -1,0 +1,35 @@
+{%extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<center>
+  <body class='card'style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+	<h3>Sign in</h3>
+<div class="card border-bg" style="width:30rem;">
+   
+  <form method="post">
+    {% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+    
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+      {% endfor %}
+    <button type="submit">Sign in</button><br>
+        <a href="{%  url 'signup' %}">
+            Need an account?
+          </a>
+
+  </form><br></div>
+</body>
+<center>
+
+{% endblock %}

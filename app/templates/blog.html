@@ -1,0 +1,35 @@
+
+
+
+{%extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<center>
+<p>Blogger website and here you express thoughts</p>
+<div class="card border-bg" style="width: 30rem;">
+   
+  <form method="post" >
+    {% csrf_token %}
+     
+       
+   Title:{{form.title}}<br><hr>
+Tags:{{form.tags}}         <br>  <hr>  
+Express Thoughts<br>{{form.blog.as_textarea}}
+
+            
+
+  <br>
+  <br>
+    <button type="submit">Publish</button><br>
+       
+
+  </form><br></div>
+
+<center>
+
+{% endblock %}

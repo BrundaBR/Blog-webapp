@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<center>
+
+
+<br><br>
+<br><br>
+<br>
+<h1>Be a BloggerHuman!</h1>
+<p>Blogs below,Keep Reading!</p>
+<body class='card'style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+
+{% for blogs in blog %}
+
+  <div class="card border-info  mb-3" style="max-width: 60rem;">
+  <div class="card-header bg-transparent   "> <div class="card-body d-flex flex-row"><img src="{{ user.profile.image.url }}" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar"><br><br><br><h4><a class="article-title" href="#">{{blogs.bloguser}}</a></h4></div><h5>{{blogs.title}}</h5></div>
+  
+  <div class="card-body text-info"> 
+    <h3 class="card-title  ">{{blogs.blog}}</h3>
+    
+    
+  </div>
+  <div class="card-footer bg-transparent   "> Created on - {{blogs.date}} Tags- {{blogs.tags}}</div>
+</div>
+</div>
+
+</body>
+{% endfor %}
+
+    
+
+  
+
+</center>
+
+{% endblock %}

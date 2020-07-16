@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<body class='card'style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+<center>
+	<div class="card" style="width: 30rem;">
+	<div class="card booking-card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+  	<img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+<h5>Username:<br>{{user}}</h5><br>
+<h6>Email:<br>{{user.email}}</h6><br>
+<a href="{%url 'profile_update' %}">Profile Update</a>
+  
+  </div></div>
+	
+ 
+</div>
+</center></body>
+
+
+{% endblock content %}

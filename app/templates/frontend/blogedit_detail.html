@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div class="card border-info  mb-3" style="max-width: 60rem;">
+  <div class="card-header bg-transparent   "><h4>{{object.title}}</h4></div>
+  <div class="card-body text-info">
+    <h2 class="card-title  ">{{object.blog}}</h2>
+    
+    
+  </div>
+  <div class="card-footer bg-transparent   ">Author: {{object.bloguser}} Created on - {{object.date}} Tags- {{object.tags}}</div>
+</center>
+  {% endblock content %}
